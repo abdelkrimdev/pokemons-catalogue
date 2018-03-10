@@ -1,4 +1,4 @@
-# Yang
+# Yang [![Build Status](https://travis-ci.org/abdelkrimdev/yang.svg?branch=master)](https://travis-ci.org/abdelkrimdev/yang)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.2.
 
