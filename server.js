@@ -5,7 +5,7 @@ const express = require('express');
 const app = express();
 
 // Redirect all requests to use https
-app.use(() => {
+/*app.use(() => {
   return function (req, res, next) {
     if (req.headers['x-forwarded-proto'] !== 'https') {
       return res.redirect(
@@ -14,7 +14,7 @@ app.use(() => {
     }
     next();
   }
-});
+});*/
 
 // Serve only the static files form the dist directory
 app.use(express.static(__dirname + '/dist'));
