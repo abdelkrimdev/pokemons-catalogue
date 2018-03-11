@@ -6,7 +6,7 @@ const app = express();
 app.use(express.static(`${__dirname}/dist`));
 
 // Redirect http to https
-app.get('*', (req, res, next) => {
+app.get('/*', (req, res, next) => {
   if (req.headers['x-forwarded-proto'] != 'https' && process.env.NODE_ENV === 'production')
     res.redirect(`https://${req.hostname}${req.url}`);
   else
