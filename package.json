@@ -37,6 +37,7 @@
   },
   "devDependencies": {
     "@angular/language-service": "^5.2.0",
+    "@types/hammerjs": "^2.0.35",
     "@types/jasmine": "~2.8.3",
     "@types/node": "~6.0.60",
     "codelyzer": "^4.0.1",
