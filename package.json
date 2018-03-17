@@ -11,7 +11,7 @@
     "start": "node server.js",
     "build": "ng build --prod",
     "postinstall": "ng build --aot -prod",
-    "test": "ng test --watch=false --single-run=true",
+    "test": "ng test --watch=false --single-run",
     "lint": "ng lint"
   },
   "dependencies": {
@@ -22,6 +22,7 @@
     "@angular/compiler": "^5.2.0",
     "@angular/compiler-cli": "^5.2.0",
     "@angular/core": "^5.2.0",
+    "@angular/flex-layout": "^5.0.0-beta.13",
     "@angular/forms": "^5.2.0",
     "@angular/http": "^5.2.0",
     "@angular/material": "^5.2.3",
