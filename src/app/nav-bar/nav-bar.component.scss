@@ -1,6 +1,9 @@
 mat-card {
-  padding: 0px;
+  z-index: 1;
+  position: fixed;
+  top: 0; left: 0; right: 0;
   border-radius: 0px;
+  padding: 0px;
   mat-icon {
     padding: 0 14px;
   }

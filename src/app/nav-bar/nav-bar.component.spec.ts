@@ -2,12 +2,15 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { NavBarComponent } from './nav-bar.component';
 
+import { MaterialModule } from '../material/material.module';
+
 describe('NavBarComponent', () => {
   let component: NavBarComponent;
   let fixture: ComponentFixture<NavBarComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [ MaterialModule ],
       declarations: [ NavBarComponent ]
     })
     .compileComponents();
@@ -19,7 +22,7 @@ describe('NavBarComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create the navigation bar component', () => {
     expect(component).toBeTruthy();
   });
 });
