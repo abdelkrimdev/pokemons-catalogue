@@ -1,16 +1,21 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+import { By } from '@angular/platform-browser';
+import { RouterLink } from '@angular/router';
 
 import { NavBarComponent } from './nav-bar.component';
 
 import { MaterialModule } from '../material/material.module';
 
 describe('NavBarComponent', () => {
-  let component: NavBarComponent;
   let fixture: ComponentFixture<NavBarComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [ MaterialModule ],
+      imports: [
+        MaterialModule,
+        RouterTestingModule
+      ],
       declarations: [ NavBarComponent ]
     })
     .compileComponents();
@@ -18,11 +23,16 @@ describe('NavBarComponent', () => {
 
   beforeEach(() => {
     fixture = TestBed.createComponent(NavBarComponent);
-    component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
   it('should create the navigation bar component', () => {
+    const component = fixture.componentInstance;
     expect(component).toBeTruthy();
+  });
+
+  it('should have a link to the dashboard page', () => {
+    const routerLinks = fixture.debugElement.queryAll(By.directive(RouterLink));
+    expect(routerLinks.findIndex(de => de.attributes['routerLink'] === 'dashboard')).toBeGreaterThanOrEqual(0);
   });
 });
