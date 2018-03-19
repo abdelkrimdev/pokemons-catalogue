@@ -29,10 +29,10 @@ describe('AppComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create the application', async(() => {
+  it('should create the application', () => {
     const component = fixture.componentInstance;
     expect(component).toBeTruthy();
-  }));
+  });
 
   it('should have a navigation bar', () => {
     const navBar = fixture.debugElement.query(By.css('app-nav-bar'));
