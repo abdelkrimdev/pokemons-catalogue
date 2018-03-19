@@ -7,4 +7,7 @@ branches:
 script:
   - yarn lint
   - yarn test
+after_success:
+ - bash <(curl -s https://codecov.io/bash)
+ - bash ./deploy.sh
 cache: yarn

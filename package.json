@@ -11,7 +11,7 @@
     "start": "node server.js",
     "build": "ng build --prod",
     "postinstall": "ng build --aot -prod",
-    "test": "ng test --watch=false --single-run",
+    "test": "ng test --watch=false --single-run --code-coverage",
     "lint": "ng lint"
   },
   "dependencies": {
@@ -40,6 +40,7 @@
     "@types/hammerjs": "^2.0.35",
     "@types/jasmine": "~2.8.3",
     "@types/node": "~6.0.60",
+    "codecov.io": "^0.1.6",
     "codelyzer": "^4.0.1",
     "enhanced-resolve": "^4.0.0",
     "jasmine-core": "~2.8.0",
