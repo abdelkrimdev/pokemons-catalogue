@@ -8,7 +8,7 @@ import { routes } from './app.routing';
 import { MaterialModule } from './material/material.module';
 
 import { AppComponent } from './app.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { HomeComponent } from './home/home.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 describe('Application Routing', () => {
@@ -22,7 +22,7 @@ describe('Application Routing', () => {
       ],
       declarations: [
         AppComponent,
-        DashboardComponent,
+        HomeComponent,
         NavBarComponent
       ],
     }).compileComponents();
@@ -33,18 +33,18 @@ describe('Application Routing', () => {
     fixture.detectChanges();
   });
 
-  it(`should redirects you to '/dashboard' when navigate to ''`, async(
+  it(`should redirects you to '/home' when navigate to ''`, async(
     inject([Router, Location], (router: Router, location: Location) => {
       router.navigate(['']).then(() => {
-        expect(location.path()).toBe('/dashboard');
+        expect(location.path()).toBe('/home');
       });
     })
   ));
 
-  it(`should takes you to '/dashboard' when navigate to 'dashboard'`, async(
+  it(`should takes you to '/home' when navigate to 'home'`, async(
     inject([Router, Location], (router: Router, location: Location) => {
-      router.navigate(['dashboard']).then(() => {
-        expect(location.path()).toBe('/dashboard');
+      router.navigate(['home']).then(() => {
+        expect(location.path()).toBe('/home');
       });
     })
   ));

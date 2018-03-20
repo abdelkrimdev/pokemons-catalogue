@@ -31,8 +31,8 @@ describe('NavBarComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should have a link to the dashboard page', () => {
+  it('should have a link to the home page', () => {
     const routerLinks = fixture.debugElement.queryAll(By.directive(RouterLink));
-    expect(routerLinks.findIndex(de => de.attributes['routerLink'] === 'dashboard')).toBeGreaterThanOrEqual(0);
+    expect(routerLinks.findIndex(de => de.attributes['routerLink'] === 'home')).toBeGreaterThanOrEqual(0);
   });
 });
