@@ -1,4 +1,5 @@
-# Pokemon's Catalogue [![Build Status](https://travis-ci.org/abdelkrimdev/yang.svg?branch=master)](https://travis-ci.org/abdelkrimdev/yang) [![codecov](https://codecov.io/gh/abdelkrimdev/yang/branch/master/graph/badge.svg)](https://codecov.io/gh/abdelkrimdev/yang)
+# Pokemon's Catalogue
+[![Build Status](https://travis-ci.org/abdelkrimdev/yang.svg?branch=master)](https://travis-ci.org/abdelkrimdev/yang) [![codecov](https://codecov.io/gh/abdelkrimdev/yang/branch/master/graph/badge.svg)](https://codecov.io/gh/abdelkrimdev/yang)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
 
