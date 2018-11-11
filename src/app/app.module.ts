@@ -7,7 +7,6 @@ import { HomeComponent } from './home/home.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 import { AppRoutingModule } from './app.routing';
-import { AnimeModule } from './anime/anime.module';
 import { MaterialModule } from './material/material.module';
 
 
@@ -21,8 +20,7 @@ import { MaterialModule } from './material/material.module';
     AppRoutingModule,
     BrowserModule,
     BrowserAnimationsModule,
-    MaterialModule,
-    AnimeModule
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -7,12 +7,9 @@ import { routes } from './app.routing';
 
 import { MaterialModule } from './material/material.module';
 
-import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 describe('Application Routing', () => {
-  let fixture: ComponentFixture<AppComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -21,17 +18,10 @@ describe('Application Routing', () => {
         RouterTestingModule.withRoutes(routes)
       ],
       declarations: [
-        AppComponent,
-        HomeComponent,
-        NavBarComponent
+        HomeComponent
       ],
     }).compileComponents();
   }));
-
-  beforeEach(() => {
-    fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-  });
 
   it(`should redirects you to '/home' when navigate to ''`, async(
     inject([Router, Location], (router: Router, location: Location) => {
