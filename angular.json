@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "yang": {
+    "pokemons-catalogue": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -48,11 +48,11 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "yang:build"
+            "browserTarget": "pokemons-catalogue:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "yang:build:production"
+              "browserTarget": "pokemons-catalogue:build:production"
             }
           }
         },
@@ -88,7 +88,7 @@
       }
     }
   },
-  "defaultProject": "yang",
+  "defaultProject": "pokemons-catalogue",
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "app",
