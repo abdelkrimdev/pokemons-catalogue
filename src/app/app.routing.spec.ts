@@ -1,4 +1,5 @@
-import { async, ComponentFixture, inject, TestBed } from '@angular/core/testing';
+import { NgZone } from '@angular/core';
+import { async, inject, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { Location } from '@angular/common';
 import { Router } from '@angular/router';
@@ -24,18 +25,22 @@ describe('Application Routing', () => {
   }));
 
   it(`should redirects you to '/home' when navigate to ''`, async(
-    inject([Router, Location], (router: Router, location: Location) => {
-      router.navigate(['']).then(() => {
-        expect(location.path()).toBe('/home');
-      });
+    inject([NgZone, Router, Location], (ngZone: NgZone, router: Router, location: Location) => {
+      ngZone.run(() =>
+        router.navigate(['']).then(() => {
+          expect(location.path()).toBe('/home');
+        })
+      );
     })
   ));
 
   it(`should takes you to '/home' when navigate to 'home'`, async(
-    inject([Router, Location], (router: Router, location: Location) => {
-      router.navigate(['home']).then(() => {
-        expect(location.path()).toBe('/home');
-      });
+    inject([NgZone, Router, Location], (ngZone: NgZone, router: Router, location: Location) => {
+      ngZone.run(() =>
+        router.navigate(['home']).then(() => {
+          expect(location.path()).toBe('/home');
+        })
+      );
     })
   ));
 });
