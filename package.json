@@ -4,9 +4,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "start": "node server.js",
+    "start": "ng serve --open",
     "build": "ng build --prod",
-    "postinstall": "ng build --aot -prod",
     "test": "ng test --watch=false --code-coverage",
     "lint": "ng lint"
   },
@@ -37,16 +36,16 @@
     "@types/hammerjs": "^2.0.36",
     "@types/jasmine": "~2.8.11",
     "@types/node": "~10.12.5",
-    "codecov.io": "^0.1.6",
     "codelyzer": "^4.5.0",
     "enhanced-resolve": "^4.1.0",
     "jasmine-core": "~3.3.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~3.1.1",
+    "karma-chrome-launcher": "^2.2.0",
     "karma-coverage-istanbul-reporter": "^2.0.4",
-    "karma-jasmine": "~1.1.2",
+    "karma-jasmine": "^2.0.0",
     "karma-jasmine-html-reporter": "^1.4.0",
-    "karma-phantomjs-launcher": "^1.0.4",
+    "puppeteer": "^1.10.0",
     "tslint": "~5.11.0"
   }
 }
