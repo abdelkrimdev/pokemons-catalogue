@@ -7,7 +7,9 @@
     "start": "ng serve --open",
     "build": "ng build --prod",
     "test": "ng test --watch=false --code-coverage",
-    "lint": "ng lint"
+    "test:watch": "ng test",
+    "lint": "ng lint --format=stylish",
+    "lint:fix": "ng lint --fix"
   },
   "dependencies": {
     "@angular/animations": "^7.0.3",
