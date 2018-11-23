@@ -5,10 +5,10 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
-import { PokemonListComponent } from './pokemon-list/pokemon-list.component';
 
 import { AppRoutingModule } from './app.routing';
 import { MaterialModule } from './material/material.module';
+import { PokemonsModule } from './pokemons/pokemons.module';
 
 
 @NgModule({
@@ -16,13 +16,13 @@ import { MaterialModule } from './material/material.module';
     AppComponent,
     HomeComponent,
     NavBarComponent,
-    PokemonListComponent,
   ],
   imports: [
     AppRoutingModule,
     BrowserModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    PokemonsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
