@@ -3,9 +3,9 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { By } from '@angular/platform-browser';
 import { RouterLink } from '@angular/router';
 
-import { NavBarComponent } from './nav-bar.component';
+import { SharedModule } from '@app/shared/shared.module';
 
-import { MaterialModule } from '../material/material.module';
+import { NavBarComponent } from './nav-bar.component';
 
 describe('NavBarComponent', () => {
   let fixture: ComponentFixture<NavBarComponent>;
@@ -13,8 +13,8 @@ describe('NavBarComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        MaterialModule,
-        RouterTestingModule
+        RouterTestingModule,
+        SharedModule
       ],
       declarations: [ NavBarComponent ]
     })
