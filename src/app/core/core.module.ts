@@ -20,7 +20,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 export class CoreModule {
   constructor( @Optional() @SkipSelf() parentModule: CoreModule) {
     if (parentModule) {
-      throw new Error(`${CoreModule.name} has already been loaded. Import ${CoreModule.name} in the AppModule only.`);
+      throw new Error(`${CoreModule.name} has already been loaded. Import ${CoreModule.name} in the root only.`);
     }
   }
 }
