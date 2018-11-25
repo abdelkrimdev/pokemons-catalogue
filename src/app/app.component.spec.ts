@@ -3,10 +3,9 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { By } from '@angular/platform-browser';
 import { RouterOutlet } from '@angular/router';
 
-import { MaterialModule } from './material/material.module';
+import { CoreModule } from './core/core.module';
 
 import { AppComponent } from './app.component';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 describe('AppComponent', () => {
   let fixture: ComponentFixture<AppComponent>;
@@ -14,12 +13,11 @@ describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        MaterialModule,
+        CoreModule,
         RouterTestingModule
       ],
       declarations: [
-        AppComponent,
-        NavBarComponent
+        AppComponent
       ],
     }).compileComponents();
   }));
