@@ -19,7 +19,6 @@ import { PokemonsModule } from './pokemons/pokemons.module';
     CoreModule,
     PokemonsModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
