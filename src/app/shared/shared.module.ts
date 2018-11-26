@@ -8,18 +8,21 @@ import {
   MatToolbarModule
 } from '@angular/material';
 
+const MaterialModules = [
+  MatButtonModule,
+  MatCardModule,
+  MatGridListModule,
+  MatIconModule,
+  MatToolbarModule
+];
+
 @NgModule({
   declarations: [],
   imports: [
     CommonModule
   ],
   exports: [
-    // Angular Material Modules
-    MatButtonModule,
-    MatCardModule,
-    MatGridListModule,
-    MatIconModule,
-    MatToolbarModule
+    ...MaterialModules
   ]
 })
 export class SharedModule { }
