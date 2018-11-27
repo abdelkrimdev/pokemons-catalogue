@@ -1,0 +1,11 @@
+mat-card {
+  max-width: 200px;
+  mat-card-content {
+    font-size: large;
+    text-align: center;
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
