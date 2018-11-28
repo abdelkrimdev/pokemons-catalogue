@@ -1,6 +1,10 @@
-<mat-card class="example-card">
-  <img mat-card-image src="https://img.pokemondb.net/artwork/large/bulbasaur.jpg" alt="Photo of a Bulbasaur">
-  <mat-card-content>
-    <a href="https://pokeapi.co/api/v2/pokemon/1/">Bulbasaur</a>
-  </mat-card-content>
-</mat-card>
+<mat-grid-list cols="4">
+  <mat-grid-tile *ngFor="let pokemon of pokemons">
+    <mat-card>
+      <img mat-card-image src="https://img.pokemondb.net/artwork/large/{{pokemon.name}}.jpg">
+      <mat-card-content>
+        <a [href]="pokemon.url">{{pokemon.name | uppercase}}</a>
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
