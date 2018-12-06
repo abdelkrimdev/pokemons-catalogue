@@ -1,5 +1,6 @@
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
@@ -17,6 +18,7 @@ import { PokemonsModule } from './pokemons/pokemons.module';
     BrowserModule,
     BrowserAnimationsModule,
     CoreModule,
+    FlexLayoutModule,
     PokemonsModule
   ],
   bootstrap: [AppComponent]
