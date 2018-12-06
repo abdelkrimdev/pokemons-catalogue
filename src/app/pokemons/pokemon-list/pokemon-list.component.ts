@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ObservableMedia } from '@angular/flex-layout';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators'
 
 @Component({
   selector: 'app-pokemon-list',
@@ -6,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pokemon-list.component.scss']
 })
 export class PokemonListComponent implements OnInit {
+  cols$: Observable<number>;
 
   pokemons = [
     {
@@ -110,9 +114,16 @@ export class PokemonListComponent implements OnInit {
     }
   ];
 
-  constructor() { }
+  constructor(private observableMedia: ObservableMedia) { }
 
   ngOnInit() {
+    this.cols$ = this.observableMedia.asObservable()
+      .pipe(
+        map(change => {
+          console.log(change);
+          return 2;
+        })
+      );
   }
 
 }
