@@ -1,12 +1,22 @@
-mat-card {
-  width: 100px;
-  height: 140px;
-  mat-card-content {
-    font-size: large;
-    text-align: center;
-    a {
-      color: white;
-      text-decoration: none;
+mat-grid-list {
+  margin: 10px;
+  padding: 10px;
+  mat-grid-tile {
+    mat-card {
+      img {
+        width: 150px;
+        height: 130px;
+        object-fit: contain;
+        background-color: white;
+      }
+      mat-card-content {
+        font-size: small;
+        text-align: center;
+        a {
+          color: white;
+          text-decoration: none;
+        }
+      }
     }
   }
 }
