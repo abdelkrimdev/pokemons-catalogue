@@ -117,13 +117,17 @@ export class PokemonListComponent implements OnInit {
   constructor(private observableMedia: ObservableMedia) { }
 
   ngOnInit() {
-    this.cols$ = this.observableMedia.asObservable()
-      .pipe(
-        map(change => {
-          console.log(change);
-          return 2;
-        })
-      );
+    this.setCols();
   }
 
+  setCols() {
+    const gridSizes = new Map([
+      ['xs', 2], ['sm', 3], ['md', 4], ['lg', 6], ['xl', 10]
+    ]);
+
+    this.cols$ = this.observableMedia.asObservable()
+      .pipe(
+        map(mediaChange => gridSizes.get(mediaChange.mqAlias))
+      );
+  }
 }
